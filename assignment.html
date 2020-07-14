@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>assignment1</title>
+	<script type="text/javascript">
+		function fun()
+		{
+			var day,time,days,hours,minutes,seconds,prep;
+			var today=new Date();
+			day=today.getDay();
+			days=["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]
+			hours=today.getHours();
+			minutes=today.getMinutes();
+			seconds=today.getSeconds();
+			document.write("Today is :"+days[day]+".<br>");
+			
+			if(hours>12 && hours<=24 )
+			{
+				hours=hours-12;
+				prep="PM";
+			}
+			else if(hours==12 && minutes>=0 && seconds>0)
+			{
+				prep="PM";
+			}
+			else
+			{
+				prep="AM";
+			}
+			document.write(hours+" "+prep+":"+minutes+":"+seconds);
+		}
+		
+	</script>
+</head>
+<body bgcolor="black">
+	<h2 style="color: purple;">Assignment1 problem1</h2>
+    <button type='button' onclick=document.getElementById('same').innerHTML=fun() style="font-size: 30px;">display</button>
+    <div id="same"></div>
+</body>
+</html>
