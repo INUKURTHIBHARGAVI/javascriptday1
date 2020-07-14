@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>assignment1 problem3</title>
+	<script type="text/javascript">
+		function fun()
+		{
+			var today=new Date();
+			var day,month,year;
+			day=today.getDay();
+			month=today.getMonth()+1;
+			year=today.getFullYear();
+			if(day<10)
+			{
+				day='0'+day;
+			}
+			if(month<10)
+			{
+				month="0"+month;
+			}
+			document.write(day+"/"+month+"/"+year);
+		}
+	</script>
+</head>
+<body style="background-color:black;">
+	<h2 style="color: purple;">Assignment1 problem 3</h2>
+	<button type="button" onclick=document.getElementById('demo').innerHTML=fun()>click to display</button>
+	<p id='demo'></p>
+
+
+</body>
+</html>
